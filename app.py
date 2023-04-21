@@ -1,11 +1,5 @@
 from signlanguage.pipeline.training_pipeline import TrainingPipeline
 
-
-
-
-
-
-
-object=TrainingPipeline()
-object.run_pipeline()
+pipeline_obj=TrainingPipeline()
+pipeline_obj.run_pipeline()
 print('Training pipeline executed....')
