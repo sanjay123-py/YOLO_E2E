@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fc2ce3f8-9a89-4c96-8446-3364f6ae90ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sign_language_data.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signlanguage/components/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/components/model_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/components/model_pusher.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/components/model_pusher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/configuration/s3_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/configuration/s3_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signlanguage/constant/training_pipeline/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/constant/training_pipeline/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signlanguage/entity/artifact_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/entity/artifact_entity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signlanguage/entity/config_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/entity/config_entity.py" afterDir="false" />
