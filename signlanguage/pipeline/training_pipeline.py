@@ -4,14 +4,16 @@ from signlanguage.exception import SignException
 from signlanguage.logger import logging
 from signlanguage.components.data_ingestion import DataIngestion
 from signlanguage.components.data_validation import DataValidation
-from signlanguage.entity.config_entity import DataIngestionConfig, DataValidationConfig
-from signlanguage.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact
+from signlanguage.components.model_trainer import ModelTrainer
+from signlanguage.entity.config_entity import DataIngestionConfig, DataValidationConfig, ModelTrainerConfig
+from signlanguage.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact, ModelTrainerArtifact
 
 
 class TrainingPipeline:
     def __init__(self):
         self.data_ingestion_config = DataIngestionConfig()
         self.data_validation_config = DataValidationConfig()
+        self.model_trainer_config = ModelTrainerConfig()
 
     def start_data_ingestion(self) -> DataIngestionArtifact:
         try:
@@ -27,13 +29,24 @@ class TrainingPipeline:
 
     def start_data_validation(self, data_ingestion_artifact:DataIngestionArtifact) -> DataValidationArtifact:
         logging.info(f"{'#'*10} Entered the data validation pipeline {'#'*10}")
-        logging.info("Getting the data from url")
         try:
             data_validation = DataValidation(data_ingestion_artifact, self.data_validation_config)
             data_validation_artifact = data_validation.initiate_data_validation()
             return data_validation_artifact
         except Exception as e:
             raise SignException(e,sys)
+    def start_model_trainer(self, data_validation_artifact:DataValidationArtifact) -> ModelTrainerArtifact:
+        logging.info(f"{'#'*10} Entered the Model trainer pipeline {'#'*10}")
+        try:
+            if(data_validation_artifact.validation_status==True):
+
+                model_trainer = ModelTrainer(model_trainer_config=self.model_trainer_config)
+                model_trainer_artifacts = model_trainer.initiate_model_trainer()
+                return model_trainer_artifacts
+            else:
+                raise Exception("Wrong format of the data is been identified")
+        except Exception as e:
+            raise SignException(e, sys)
 
     def run_pipeline(self) -> None:
         try:
@@ -41,5 +54,9 @@ class TrainingPipeline:
             data_validation_artifact=self.start_data_validation(
                 data_ingestion_artifact=data_ingestion_artifact
             )
+            model_trainer_artifact = self.start_model_trainer(
+                data_validation_artifact=data_validation_artifact
+            )
         except Exception as e:
             raise SignException(e, sys)
+
