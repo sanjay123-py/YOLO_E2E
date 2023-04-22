@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc2ce3f8-9a89-4c96-8446-3364f6ae90ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/components/data_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/components/data_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/constant/training_pipeline/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/constant/training_pipeline/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/entity/artifact_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/entity/artifact_entity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/entity/config_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/entity/config_entity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signlanguage/pipeline/training_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/signlanguage/pipeline/training_pipeline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolov5" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolov5/.gitignore" beforeDir="false" />
     </list>
@@ -132,16 +137,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/signlanguage/entity/config_entity.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
